@@ -6,7 +6,7 @@ entity vending is
         sel, coins: in std_logic_vector (2 downto 0);
         reset,clk: in std_logic;
         v,ni: out std_logic;
-        current_total: out std_logic_vector (6 downto 0)
+        current_total: out std_logic_vector (6 downto 0);
         deficit: out std_logic_vector (6 downto 0)); 
 end vending;
 
@@ -41,7 +41,7 @@ begin
                             when "111" => next_state <= d2; -- select D
                             when others => next_state <= s2; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a5; -- select A
                             when "101" => next_state <= b5; -- select B
@@ -72,7 +72,7 @@ begin
                             when "111" => next_state <= d3; -- select D
                             when others => next_state <= s3; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a6; -- select A
                             when "101" => next_state <= b6; -- select B
@@ -102,7 +102,7 @@ begin
                             when "111" => next_state <= d4; -- select D
                             when others => next_state <= s4; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a7; -- select A
                             when "101" => next_state <= b7; -- select B
@@ -133,7 +133,7 @@ begin
                             when "111" => next_state <= d5; -- select D
                             when others => next_state <= s5; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a8; -- select A
                             when "101" => next_state <= b8; -- select B
@@ -164,7 +164,7 @@ begin
                             when "111" => next_state <= d6; -- select D
                             when others => next_state <= s6; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a9; -- select A
                             when "101" => next_state <= b9; -- select B
@@ -195,7 +195,7 @@ begin
                             when "111" => next_state <= d7; -- select D
                             when others => next_state <= s7; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "01" => --Q
                         case sel is 
                             when "100" => next_state <= a10; -- select A
                             when "101" => next_state <= b10; -- select B
@@ -225,7 +225,7 @@ begin
                             when "111" => next_state <= d8; -- select D
                             when others => next_state <= s8; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a11; -- select A
                             when "101" => next_state <= b11; -- select B
@@ -255,7 +255,7 @@ begin
                             when "111" => next_state <= d9; -- select D
                             when others => next_state <= s9; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a12; -- select A
                             when "101" => next_state <= b12; -- select B
@@ -285,7 +285,7 @@ begin
                             when "111" => next_state <= d10; -- select D
                             when others => next_state <= s10; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a13; -- select A
                             when "101" => next_state <= b13; -- select B
@@ -315,7 +315,7 @@ begin
                             when "111" => next_state <= d11; -- select D
                             when others => next_state <= s11; -- enable is 0
                         end case;
-                    when "100" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a14; -- select A
                             when "101" => next_state <= b14; -- select B
@@ -723,7 +723,7 @@ begin
             v <= '0'; 
             ni <= '1';
             current_total <= "0010100";--20
-            deficit <= "0000101" --5
+            deficit <= "0000101"; --5
         when a5 =>
             v <= '0'; 
             ni <= '1';
