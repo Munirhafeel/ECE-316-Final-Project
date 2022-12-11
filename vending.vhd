@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity vending is
     port(
         sel, coins: in std_logic_vector (2 downto 0);
-        reset: in std_logic;
+        reset,clk: in std_logic;
+        v,ni: out std_logic;
         current_total: out std_logic_vector (6 downto 0)
         deficit: out std_logic_vector (6 downto 0)); 
 end vending;
