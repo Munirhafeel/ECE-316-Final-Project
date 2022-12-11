@@ -948,7 +948,7 @@ begin
             v <= '0'; 
             ni <= '0';
             current_total <= "0010100";--20
-            deficit <= "0100011"; --30
+            deficit <= "0011110"; --30
         when d5 =>
             v <= '0'; 
             ni <= '0';
