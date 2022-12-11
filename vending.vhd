@@ -195,7 +195,7 @@ begin
                             when "111" => next_state <= d7; -- select D
                             when others => next_state <= s7; -- enable is 0
                         end case;
-                    when "01" => --Q
+                    when "001" => --Q
                         case sel is 
                             when "100" => next_state <= a10; -- select A
                             when "101" => next_state <= b10; -- select B
