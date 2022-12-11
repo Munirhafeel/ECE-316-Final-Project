@@ -342,7 +342,7 @@ begin
                     when "101" => next_state <= b10; -- select B
                     when "110" => next_state <= c10; -- select C
                     when "111" => next_state <= d10; -- select D
-                    when others => next_state <= s10; -- enable is 0
+                    when others => next_state <= s11; -- enable is 0
                 end case;
 
             when s12 => --60
@@ -351,7 +351,7 @@ begin
                     when "101" => next_state <= b10; -- select B
                     when "110" => next_state <= c10; -- select C
                     when "111" => next_state <= d10; -- select D
-                    when others => next_state <= s10; -- enable is 0
+                    when others => next_state <= s12; -- enable is 0
                 end case;
 
             when s13 => --65
@@ -360,7 +360,7 @@ begin
                     when "101" => next_state <= b10; -- select B
                     when "110" => next_state <= c10; -- select C
                     when "111" => next_state <= d10; -- select D
-                    when others => next_state <= s10; -- enable is 0
+                    when others => next_state <= s13; -- enable is 0
                 end case;
 
             when s14 => --70
@@ -369,7 +369,7 @@ begin
                     when "101" => next_state <= b10; -- select B
                     when "110" => next_state <= c10; -- select C
                     when "111" => next_state <= d10; -- select D
-                    when others => next_state <= s10; -- enable is 0
+                    when others => next_state <= s13; -- enable is 0
                 end case;
             
             when a0 => -- 0-15
